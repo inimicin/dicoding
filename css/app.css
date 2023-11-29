@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Poppins&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 300vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url(https://images.unsplash.com/photo-1480944657103-7fed22359e1d) !important;
+  background-size: cover !important;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+header.navbar-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding-block: 1rem;
+  z-index: 999;
+
+}
+
+header.navbar-container .logo img {
+  height: 40px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  color: #f06cab;
+}
+
+.active {
+  color: #f06cab !important;
+  box-shadow: 0 3px 6px 0 #f06cab;
+  border-radius: 25px;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem 4rem;
+  flex: 1;
+  margin-top: 1px;
+  margin-inline: auto;
+  align-items: center;
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+main .content {
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+main .content .content-description {
+  margin-top: 11rem;
+  margin-bottom: 13rem;
+
+}
+
+main .content .content-description .title {
+  font-size: 2rem;
+  margin-block: 1rem;
+}
+
+main .content .content-description p {
+  line-height: 1.7rem;
+  font-size: 1rem;
+}
+
+main .content .content-description button {
+  padding: 0.6rem 1rem;
+  margin-block-start: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+
+  border: 2px solid white;
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+  border: 2px solid #f06cab;
+  color: #f06cab;
+  background-color: transparent;
+}
+
+main aside {
+  flex: 1;
+}
+
+.featured-image {
+  width: 300px;
+  max-height: 300px;
+  object-position: center;
+  object-fit: cover;
+  
+}
+
+.profile img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  min-width: 250px;
+  background-size: cover;
+  border-radius: 100px;
+  object-position: center;
+}
+
+.katalog {
+  padding-bottom: 2rem;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 #f06cab;
+  border-radius: 10px;
+
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 5rem;
+  margin-right: 0;
+  margin-inline-start: 10rem;
+}
+
+footer {
+  padding: 40px;
+  color: white;
+  font-size: 0.8rem !important;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  box-shadow: 0 4px 8px 0 #f06cab;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: white;
+  box-shadow: transparent;
+  transition: all 0.15s ease-in;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #f06cab !important;
+  box-shadow: 0 3px 6px 0 #f06cab;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column;
+    padding: 1rem 3rem;
+  }
+
+  main aside {
+    align-self: center;
+  }
+  header.navbar-container {
+    flex-direction: column;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 1rem 3rem;
+  }
+
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+
+  .card {
+    margin-inline-start: 0;
+  }
+
+
+
+}
